@@ -13,23 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require answers
 //= require_tree .
-
-var getAnswer = function(){
-  $.ajax( "/answers", {  
-    type: "post",
-    success: function(data){
-      $("#answer").html(data.text);
-    }
-  });
-
-}
-
-
-$(function(){
-  $("#answer").on("click",function(){
-    event.preventDefault();
-    getAnswer();
-  });
-
-});

@@ -3,7 +3,7 @@ class AnswersController < ApplicationController
     @answers = Answer.all
   end
 
-	def create
+	def shake
 		a = Answer.all.sample
     	render json: a
 	end
